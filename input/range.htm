@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" spellcheck="false">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Range Slider</title>
+		<link rel="stylesheet" href="./range-slider.css">
+    <!--
+.rgb{
+	font:500 1rem/normal sans-serif;
+	padding:.35em .75em .56em .75em;
+	border:1px dashed #bcbcbc;
+	display:inline-block;
+	user-select:none
+}
+
+.rgb legend{font-weight:600}
+
+.range-slider{
+	display: grid;
+	grid-template-columns:auto auto 2em;
+	grid-template-rows:1fr 1fr 1fr;
+	gap:.3em;
+	grid-template-areas:"label input output";
+	align-items:center;
+	font-size:.86em;
+	color:#8b8b8b;
+}
+
+.range-slider label{text-align:right}
+.range-slider input:focus{outline:none}
+.range-slider input:focus+output{color:#000}
+
+
+
+
+/*
+.range-slider input::-webkit-slider-runnable-track{
+	height:1.4rem;
+	border:1px solid #e0e0e0;
+	background:#fafafa;
+	cursor:pointer;
+	padding:2px
+}
+
+.range-slider input::-webkit-slider-thumb{
+	margin:0;
+	width:.6rem;
+	height:100%;
+	border-radius:0;
+	border:1px solid #b3b0b0;
+	background:#eee linear-gradient(to bottom, #eee 0%, #e0e0e0 100%);
+	-webkit-appearance:none;
+}
+*/ 
+    -->
+		<!--<script src="./*.js"></script>-->
+	</head>
+	<body>
+		<main>
+
+			<form>
+					<fieldset class="rgb">
+						<legend>RGB</legend>
+						<span class="range-slider">
+							<label>Red</label>
+							<input type="range" min="0" max="255" step="1" list="rgb-tickmarks" name="red" value="0">
+							<output for="red">0</output>
+							<label>Green</label>
+							<input type="range" min="0" max="255" step="1" list="rgb-tickmarks" name="green" value="0">
+							<output for="green">0</output>
+							<label>Blue</label>
+							<input type="range" min="0" max="255" step="1" list="rgb-tickmarks" name="blue" value="0">
+							<output for="blue">0</output>
+						</span>
+					</fieldset>
+			</form>
+			<datalist id="rgb-tickmarks">
+				<option value="0"><option>
+				<option value="50"><option>
+				<option value="100"><option>
+				<option value="150"><option>
+				<option value="200"><option>
+				<option value="255"><option>
+			</datalist>
+		</main>
+	</body>
+</html>
